@@ -15,21 +15,42 @@ print(data)
 print("--------------------------------------------------")
 
 ##Drop rows with any missing values
-def drop_function(_axis, dropHow):
+#Axis0 = row Axis1 = Column
+def drop_na (_axis, dropHow):
    dropped_data = data.dropna(axis = _axis, how = dropHow)
    print("Dropped Data")
    print (dropped_data)
    print("--------------------------------------------------")
 
-
-drop_function(0, 'all')
-
-##Drop a column
-##data = data.drop('Gender', axis=1)
-
+##Drop a column by Column Index (starts at 0)
+#dop func -> data.drop('Gender', axis=1)
+def drop_col (index):
+    drop_col_data = data.drop(data.columns[index], axis = 1)
+    print("Dropped Column Data")
+    print (drop_col_data)
+    print("--------------------------------------------------")   
+    
 ##Change column names
-data.columns.values[4] = "Age(years)"
+#data.columns.values[4] = "Age(years)"
+def col_name (index, newName):
+    temp_Data = data.copy()
+    temp_Data.columns.values[index] = newName
+    print("Updated Columns")
+    print(temp_Data)
+    print("--------------------------------------------------")
 
-print("Updated Columns Data")
-print(data)
-print("--------------------------------------------------")
+
+
+
+
+#  col_name(4, 'Age') Index to modify & NewName
+    
+#  drop_col(2) Index to drop
+    
+#  drop_na(0, 'all') Axis and HowtoDrop
+
+
+##Add Input Feature
+#data=pd.read_exce;("dog data.xlsx")
+input_feature = input("Enter Dog's Name")
+print(input_feature)

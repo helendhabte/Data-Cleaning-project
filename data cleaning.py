@@ -1,9 +1,8 @@
 ##Import libraries
 import pandas as pd
-#import numpy as np
 
 ##Import data
-data = pd.read_excel("dog data.xlsx")
+data = pd.read_excel('dog_data.xlsx')
 
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
@@ -14,12 +13,18 @@ print("Original Data")
 print(data)
 print("--------------------------------------------------")
 
+##Add Input Feature
+#data=pd.read_exce;("dog data.xlsx")
+input_feature = input("Enter Dog's Name:")
+print(input_feature)
+
 ##Drop rows with any missing values
-#Axis0 = row Axis1 = Column
+#Axis0 = row 
+#Axis1 = Column
 def drop_na (_axis, dropHow):
-   dropped_data = data.dropna(axis = _axis, how = dropHow)
-   print("Dropped Data")
-   print (dropped_data)
+   drop_na_data = data.dropna(axis = _axis, how = dropHow)
+   print("Dropped NA Data")
+   print (drop_na_data)
    print("--------------------------------------------------")
 
 ##Drop a column by Column Index (starts at 0)
@@ -29,28 +34,20 @@ def drop_col (index):
     print("Dropped Column Data")
     print (drop_col_data)
     print("--------------------------------------------------")   
+
+##Drop a row by Row Index
+#data.drop(data.index[0])
+def drop_row (index):
+    drop_row_data = data.drop(data.rows[index])
+    print("Drop Row Data")
+    print(drop_row_data)
+    print("--------------------------------------------------") 
     
-##Change column names
-#data.columns.values[4] = "Age(years)"
+##Change column name
+#data.columns.values[4] = "Age(years)" Index to modify & assign NewName
 def col_name (index, newName):
     temp_Data = data.copy()
     temp_Data.columns.values[index] = newName
     print("Updated Columns")
     print(temp_Data)
     print("--------------------------------------------------")
-
-
-
-
-
-#  col_name(4, 'Age') Index to modify & NewName
-    
-#  drop_col(2) Index to drop
-    
-#  drop_na(0, 'all') Axis and HowtoDrop
-
-
-##Add Input Feature
-#data=pd.read_exce;("dog data.xlsx")
-input_feature = input("Enter Dog's Name")
-print(input_feature)

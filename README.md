@@ -1,11 +1,13 @@
 # Data-Cleaning-project
 
-The overall goal of this project is to develop a website where I can upload datasets and execute a few basic data cleaning steps. 
+The overall goal of this project is to develop a website to upload datasets and execute a few basic data cleaning processes. 
 
 Features:
 - Edit column names
-- Treat empty rows (replace with mean, median or mode)
-- Delete empty rows
+- Edit single cell
+- Drop empty rows / Drop row by a condition
 
 Long-term goals:
-- Input data of any data type and provide multiple options to convert final data into different data file types (csv, python file, etc.)
+- Input data of any type
+- Provide different data convertion options (csv, python file, etc.)
+- Treat blank rows (commute mean, median, or mode)

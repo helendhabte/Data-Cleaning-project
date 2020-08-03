@@ -5,7 +5,7 @@ The overall goal of this project is to develop a website to upload datasets and 
 Features:
 - Edit column names
 - Edit single cell
-- Drop empty rows / Drop row by a condition
+- Drop rows/columns by index
 
 Long-term goals:
 - Input data of any type

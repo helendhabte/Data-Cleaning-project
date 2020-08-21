@@ -9,5 +9,5 @@ Features:
 
 Long-term goals:
 - Input data of any type
-- Provide different data convertion options (csv, python file, etc.)
+- Provide different data convertion options
 - Treat blank cells (commute mean, median, or mode)
